@@ -2,8 +2,10 @@
  Data Structure 2021-1 Ucaldas
 
 #Proyecto
+
 *Text
-![image](https://user-images.githubusercontent.com/49491301/113485608-20a91080-9474-11eb-8c92-d3fb7d73d2f6.png)
+
+![CuevaAcme](https://user-images.githubusercontent.com/49491301/124370224-958a1300-dc3a-11eb-9724-05f5be364e37.png)
 
 #Realizar🚀
 
