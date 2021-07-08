@@ -1,16 +1,16 @@
 class Vertice:
-    def __init__(self, dato):
-        self.dato = dato
-        self.listaAdyacentes = []
+    def __init__(self, data):
+        self.data = data
+        self.adjacentList = []
 
-    def getDato(self):
-        return self.dato
+    def getData(self):
+        return self.data
 
-    def setDato(self, dato):
-        self.dato = dato
+    def setData(self, data):
+        self.data = data
 
-    def getListaAdyacentes(self):
-        return self.listaAdyacentes
+    def getAdjacentList(self):
+        return self.adjacentList
 
-    def setListaAdyacentes(self, listaAdyacentes):
-        self.listaAdyacentes = listaAdyacentes
+    def setAdjacentList(self, adjacentList):
+        self.adjacentList = adjacentList

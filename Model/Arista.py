@@ -1,23 +1,23 @@
 class Arista:
-    def __init__(self, origen, destino, peso):
-        self.origen = origen
-        self.destino = destino
-        self.peso = peso
+    def __init__(self, source, destinatation, weight):
+        self.source = source
+        self.destinatation = destinatation
+        self.weight = weight
 
-    def getOrigen(self):
-        return self.origen
+    def getSource(self):
+        return self.source
 
-    def setOrigen(self, origen):
-        self.origen = origen
+    def setSource(self, source):
+        self.source = source
 
-    def getDestino(self):
-        return self.destino
+    def getDestinatation(self):
+        return self.destinatation
 
-    def setDestino(self, destino):
-        self.destino = destino
+    def setDestinatation(self, destinatation):
+        self.destinatation = destinatation
 
-    def getPeso(self):
-        return self.peso
+    def getWeight(self):
+        return self.weight
 
-    def setPeso(self, peso):
-        self.peso = peso
+    def setWeight(self, weight):
+        self.weight = weight
