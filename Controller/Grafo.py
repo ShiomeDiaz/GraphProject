@@ -66,3 +66,63 @@ class Grafo:
                     for dato in vertice.getListaAdyacentes():
                         self.profundidad(dato)
         """
+    def amplitude(self,data):
+        visitedA=[]
+        tail=aboutWhat()
+        vertice=self.checkVertice(data)
+        if vertice is not None:
+            tail.append(vertice)
+            visitedA.append(data)
+        while cola:
+            element=tail.popleft()
+            for adjacent in element.getAdjacent():
+                if adjacent not in visitedA
+                    vertice=self.checkVertice(adjacent)
+                    tail.append(vertice)
+                    visitedA.append(adjacent)
+        return visitedA
+    def impressVerice(self):
+        for vertice in self.verticesList:
+            print(vertice.getData())
+    def impressEdge(self):
+        for edge in self.edgesList:
+            print ('Origen: {0} -- Destino: {1} -- Peso: {2}'.format(arista.getSource(),arista.getDestinatation(),arista.getWeight()))
+    def impressAdjacentList(self):
+        for vertice in self.edgesList:
+            print ('Lista de adyacentes de ', vertice.getData(), ': ', vertice.getAdjacentList())
+    def separator(self):
+        print()
+        print('-------------------------------------')
+        print()
+    def getWells(self):
+        numberWells=0
+        for vertice in self.verticesList:
+            if len(vertice.getAdjacentList())==0:
+                print('el vertice: ',vertice.getData(),'es un pozo')
+                numberWells+=1
+            print ('la cantidad de pozos del grafo es:',numberWells)
+            return numberWells
+    def getSources(self):
+        numberSources=0
+        flag=False
+        for vertice in self.verticesList:
+            for edge in self.edgesList:
+                if edge.getDestinatation()==vertice.getData():
+                    flag=True
+                if flag!=False:
+                    break
+            if bandera==False:
+                print('el vertice: ', vertice.getData(),'es una fuente')
+                numberSources+=1
+        print('la cantidad de fuentes en el grafo es: ',numberSources)
+        return numberSources
+    def strongConnected(self):
+        numberWells=self.getWells()
+        numberSources=self.getSources()
+        if numberWells>0 and numberSources>0:
+            print ('el grafo es debilmente conexo')
+            return True
+
+
+
+
