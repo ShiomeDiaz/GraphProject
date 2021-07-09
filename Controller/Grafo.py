@@ -76,7 +76,7 @@ class Grafo:
         while cola:
             element=tail.popleft()
             for adjacent in element.getAdjacent():
-                if adjacent not in visitedA
+                if adjacent not in visitedA:
                     vertice=self.checkVertice(adjacent)
                     tail.append(vertice)
                     visitedA.append(adjacent)
@@ -122,6 +122,46 @@ class Grafo:
         if numberWells>0 and numberSources>0:
             print ('el grafo es debilmente conexo')
             return True
+    def ordering(selfself,copyEdges):#se ordena de menor a mayor
+        for i in (len(copyEdges)):
+            for j in range(len (copyEdges)):
+                if copyEdges[i].getWeight()<copyEdges[j].getWeight:
+                    temp=copyEdges[i]
+                    copyEdges[i]=copyEdges[j]
+                    copyEdges[j]=temp
+    def prim(self):
+        copyEdges=copy(self.edgesList)
+        set=[]#se encarga de guardar los vertices visitados
+        edgesPrim=[]
+        edgesTemp=[]
+        self.ordering(copyEdges)
+        self.destinatation(copyEdges)
+        less=copyEdges[0]
+        set.append(less.getSource())
+        finish=False:
+        while finish==False:
+            for vertice in set:
+                self.primAlgorithm(copyEdges,set,edgesPrim,edgesTemp,vertice)
+            if len(self.verticesList)==len(set):
+                finish=True
+        print(set)
+        for edge in edgesPrim:
+            print('Origen: {0} - Destino: {1} - Peso: {2}'.format(arista.getSource(), arista.getDestinatation(), arista.getWeight()))
+        return aristasPrim
+    def primAlgorithm(self,copyEdges,set,edgesPrim,edgesTemp,vertice):
+        cycle=False
+        self.addTemp(copyEdges,edgesTemp,vertice)
+        candidate=self.candidatePrim(edgesTemp,copyEdges,edgesPrim)
+        if candidate!None:
+            if candidate.getSource()in set and candidate.getDestinatation()in set:
+                cycle=True
+            if cycle==False:
+                edgesPrim.append(candidate)
+                if not candidate.getSource()in set:
+                    set.append(candidate.getDestinatation())
+    def addTemp(self,copyEdges,edgesTemp,vertice):
+
+
 
 
 
