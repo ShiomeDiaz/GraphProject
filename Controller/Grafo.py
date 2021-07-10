@@ -138,7 +138,7 @@ class Grafo:
         self.destinatation(copyEdges)
         less=copyEdges[0]
         set.append(less.getSource())
-        finish=False:
+        finish=False
         while finish==False:
             for vertice in set:
                 self.primAlgorithm(copyEdges,set,edgesPrim,edgesTemp,vertice)
@@ -152,7 +152,7 @@ class Grafo:
         cycle=False
         self.addTemp(copyEdges,edgesTemp,vertice)
         candidate=self.candidatePrim(edgesTemp,copyEdges,edgesPrim)
-        if candidate!None:
+        if candidate !=None :
             if candidate.getSource()in set and candidate.getDestinatation()in set:
                 cycle=True
             if cycle==False:
@@ -160,7 +160,14 @@ class Grafo:
                 if not candidate.getSource()in set:
                     set.append(candidate.getDestinatation())
     def addTemp(self,copyEdges,edgesTemp,vertice):
-
+        for edge in copyEdges:
+            if edge.getSource()==vertice or edge.getDetinatation()==vertice:
+                if self.checkEdgeTep(edge, edgesTemp):
+                    edgesTemp.append(edge)
+    def checkEdgeTemp(self,edge,edgeTemp):
+        for element in edgeTemp:
+            if element.get Origen()==edge.getSource() and element.getdestinatation and element.getdestinatation():
+                return Falce
 
 
 
