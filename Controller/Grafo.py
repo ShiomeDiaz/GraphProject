@@ -19,7 +19,7 @@ class Grafo:
         return self.visitedList
     def VerticeIngress (self, data):
         if self.checkVertice(data) is None:
-            self.verticesList.append(vertice(data))
+            self.verticesList.append(Vertice(data))
     def checkVertice(self,data):
         for vertice in self.verticesList:
             if data== vertice.getData():
@@ -166,8 +166,8 @@ class Grafo:
                     edgesTemp.append(edge)
     def checkEdgeTemp(self,edge,edgeTemp):
         for element in edgeTemp:
-            if element.get Origen()==edge.getSource() and element.getdestinatation and element.getdestinatation():
-                return Falce
+            if element.getOrigen()==edge.getSource() and element.getdestinatation and element.getdestinatation():
+                return False
 
 
 
