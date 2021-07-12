@@ -1,4 +1,4 @@
-class Vertice:
+class Apex:
     def __init__(self, data):
         self.data = data
         self.adjacentList = []

@@ -1,6 +1,6 @@
 import pygame
-from Model.Arista import Arista
-from Model.Vertice import Vertice
+from Model.Edge import Arista
+from Model.Apex import Vertice
 from collections import deque
 from copy import copy
 import json

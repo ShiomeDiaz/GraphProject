@@ -1,14 +1,14 @@
-class Arista:
-    def __init__(self, source, destinatation, weight):
-        self.source = source
+class Edge:
+    def __init__(self,origin, destinatation, weight):
+        self.origin = origin
         self.destinatation = destinatation
         self.weight = weight
 
-    def getSource(self):
-        return self.source
+    def getOrigin(self):
+        return self.origin
 
-    def setSource(self, source):
-        self.source = source
+    def setOrigin(self, origin):
+        self.origin = origin
 
     def getDestinatation(self):
         return self.destinatation
